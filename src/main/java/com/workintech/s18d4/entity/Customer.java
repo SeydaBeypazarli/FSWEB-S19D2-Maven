@@ -24,8 +24,8 @@ public class Customer {
     @Column(name = "salary")
     private double salary;
 
-    @OneToOne(mappedBy = "costumer", cascade = CascadeType.ALL)
-     private List<Account> accounts = new ArrayList<>();
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<Account> accounts = new ArrayList<>();
 
     @OneToOne( cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")

@@ -11,8 +11,6 @@ public class CustomerServiceImpl implements CustomerService {
 
     private CustomerRepository customerRepository;
 
-    public CustomerServiceImpl(CustomerRepository mockCustomerRepository) {
-    }
 
     @Override
     public List<Customer> findAll() {
@@ -26,6 +24,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer save(Customer customer) {
+
         return customerRepository.save(customer);
     }
 
