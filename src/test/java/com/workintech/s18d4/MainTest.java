@@ -163,7 +163,7 @@ class MainTest {
         sampleCustomerForCustomerServiceTest.setLastName("Doe");
         sampleCustomerForCustomerServiceTest.setEmail("john.doe@example.com");
 
-        customerService = new CustomerServiceImpl(mockCustomerRepository);
+
     }
 
     @Test
