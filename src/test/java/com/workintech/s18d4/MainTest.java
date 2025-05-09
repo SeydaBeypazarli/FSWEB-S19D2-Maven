@@ -155,7 +155,7 @@ class MainTest {
         sampleAccountForAccountServiceTest.setId(1L);
         sampleAccountForAccountServiceTest.setAccountName("Savings Account");
         sampleAccountForAccountServiceTest.setMoneyAmount(1000.00);
-        accountService = new AccountServiceImpl(mockAccountRepository);
+
 
         sampleCustomerForCustomerServiceTest = new Customer();
         sampleCustomerForCustomerServiceTest.setId(1L);

@@ -22,7 +22,7 @@ public class Address {
     @Column(name = "description")
     private String description;
 
-    @JsonBackReference
+
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     private Customer customer;
 }

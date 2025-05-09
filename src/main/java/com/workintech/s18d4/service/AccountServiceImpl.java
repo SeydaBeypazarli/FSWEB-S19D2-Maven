@@ -1,8 +1,10 @@
 package com.workintech.s18d4.service;
 
 import com.workintech.s18d4.repository.AccountRepository;
-import com.workintech.s18d4.repository.CustomerRepository;
+
 import com.workintech.s18d4.entity.Account;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,10 +12,10 @@ import java.util.List;
 @Service
 public class AccountServiceImpl implements AccountService {
 
-
-    private AccountRepository accountRepository;
-
-    public AccountServiceImpl(AccountRepository mockAccountRepository) {
+    private final AccountRepository accountRepository;
+    @Autowired
+    public AccountServiceImpl(AccountRepository accountRepository) {
+        this.accountRepository = accountRepository;
     }
 
     @Override
