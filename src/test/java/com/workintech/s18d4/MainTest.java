@@ -12,7 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -155,7 +155,7 @@ class MainTest {
         sampleAccountForAccountServiceTest.setId(1L);
         sampleAccountForAccountServiceTest.setAccountName("Savings Account");
         sampleAccountForAccountServiceTest.setMoneyAmount(1000.00);
-
+        accountService = new AccountServiceImpl(mockAccountRepository);
 
         sampleCustomerForCustomerServiceTest = new Customer();
         sampleCustomerForCustomerServiceTest.setId(1L);
@@ -163,7 +163,7 @@ class MainTest {
         sampleCustomerForCustomerServiceTest.setLastName("Doe");
         sampleCustomerForCustomerServiceTest.setEmail("john.doe@example.com");
 
-
+        customerService = new CustomerServiceImpl(mockCustomerRepository);
     }
 
     @Test
